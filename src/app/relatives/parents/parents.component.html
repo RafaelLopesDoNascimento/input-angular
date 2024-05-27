@@ -1,0 +1,11 @@
+<p>parents works!</p>
+<input type="text" (input)="handleInputChange($event)" placeholder="Enter value"/>
+<button (click)="logValue()">Log Value</button>
+
+<app-inputs-childs [valueTest]="inputValue"></app-inputs-childs>
+<ul>
+
+  @for(item of list; track item;) {
+  <li>{{item}}</li>
+  }
+</ul>
