@@ -1,11 +1,27 @@
 <p>parents works!</p>
-<input type="text" (input)="handleInputChange($event)" placeholder="Enter value"/>
+<label for="">First input</label>
+<br /><br />
+<input
+  type="text"
+  (input)="handleInputChange($event)"
+  placeholder="Enter first value"
+/>
+<br /><br />
+<!--  segundo input forma simples -->
+<label for="">Second input</label>
+<br /><br />
+<input type="text" [(ngModel)]="secondValue" placeholder="Enter second value" />
+<!-- segundo input forma simples  -->
+<br /><br />
 <button (click)="logValue()">Log Value</button>
 
-<app-inputs-childs [valueTest]="inputValue"></app-inputs-childs>
+<app-inputs-childs
+  [valueTest]="inputValue"
+  [secondInput]="secondValue"
+></app-inputs-childs>
 <ul>
-
   @for(item of list; track item;) {
-  <li>{{item}}</li>
+  <li>First Object: {{ item.obj1 }}</li>
+  <li>Second Object: {{ item.obj2 }}</li>
   }
 </ul>
