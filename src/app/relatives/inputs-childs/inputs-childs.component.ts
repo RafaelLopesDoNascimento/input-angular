@@ -13,14 +13,11 @@ export class InputsChildsComponent {
   @Input({
     required: true,
   })
-  set valueTest(value: string) {
+  set firstInput(value: string) {
     this.inputToSet.set(value);
   }
 
   //  segundo input forma simples
   //@input simple form
-  @Input({
-    required: true,
-  })
-  secondInput: string = '';
+  @Input({ required: true }) secondInput: string = '';
 }

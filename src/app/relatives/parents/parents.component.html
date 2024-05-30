@@ -13,12 +13,14 @@
 <input type="text" [(ngModel)]="secondValue" placeholder="Enter second value" />
 <!-- segundo input forma simples  -->
 <br /><br />
-<button (click)="logValue()">Log Value</button>
+<!-- <button (click)="logValue()">Log Value</button> -->
 
 <app-inputs-childs
-  [valueTest]="inputValue"
+  [firstInput]="inputValue"
   [secondInput]="secondValue"
 ></app-inputs-childs>
+
+<app-outputs-childs (outputName)="handleOutputName(inputValue, secondValue)"></app-outputs-childs>
 <ul>
   @for(item of list; track item;) {
   <li>First Object: {{ item.obj1 }}</li>
